@@ -1,0 +1,85 @@
+:root {
+  --color-brown: #52503b;
+  --color-white: #f9fcff;
+  // --color-blue-lightness: #CEE5FA;
+  --color-yellow-light: #faf8f0;
+  // --color-light-blue: #189BE4;
+  // --color-blue: #007EC5;
+  // --color-black: #1D2732;
+  // --color-light-gray: #EBECEF;
+  // --color-gray: #B3B6BB;
+  // --color-red: #FE5F5F;
+  // --color-pink: #E757B6;
+  // --color-green: #65C00F;
+  // --color-magenta: #7645BA;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  background: var(--color-brown);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 120px 10px 120px;
+  img {
+    width: 128px;
+    height: 45px;
+  }
+  &_contact-block {
+    &__link {
+      padding-left: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: var(--color-white);
+    }
+  }
+}
+.main {
+  height: 800px;
+  background: url("./images/back-house.png") no-repeat center;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  &__logo {
+    width: 256px;
+    height: 90px;
+    margin-bottom: 34px;
+  }
+  &_text {
+    text-align: center;
+    color: var(--color-white);
+    font-family: "Montserrat";
+    font-size: 48px;
+    line-height: 53px;
+    margin-bottom: 34px;
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-white);
+      opacity: 0.6;
+      margin-bottom: 116px;
+    }
+  }
+}
+.block-decription {
+    display: flex;
+    justify-content: center;
+  background-color: var(--color-yellow-light);
+  width: 1440px;
+  height: 410px;
+}
+.block-decription-caps {
+  background-color: var(--color-white);
+  width: 1440px;
+  height: 568px;
+}

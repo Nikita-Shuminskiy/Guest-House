@@ -1,0 +1,103 @@
+@charset "UTF-8";
+:root {
+  --color-brown: #52503b;
+  --color-white: #f9fcff;
+  --color-yellow-light: #faf8f0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: var(--color-brown);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 120px 10px 120px;
+}
+
+.header img {
+  width: 128px;
+  height: 45px;
+}
+
+.header_contact-block__link {
+  padding-left: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.main {
+  height: 800px;
+  background: url("./images/back-house.png") no-repeat center;
+  /* Firefox 3.6+ */
+  /* Safari 3.1+ и Chrome 4.0+ */
+  /* Opera 9.6+ */
+  background-size: 100%;
+  /* Современные браузеры */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.main__logo {
+  width: 256px;
+  height: 90px;
+  margin-bottom: 34px;
+}
+
+.main_text {
+  text-align: center;
+  color: var(--color-white);
+  font-family: "Montserrat";
+  font-size: 48px;
+  line-height: 53px;
+  margin-bottom: 34px;
+}
+
+.main_text p {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  opacity: 0.6;
+  margin-bottom: 116px;
+}
+
+.block-decription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--color-yellow-light);
+  width: 1440px;
+  height: 410px;
+}
+
+.block-decription-caps {
+  background-color: var(--color-white);
+  width: 1440px;
+  height: 568px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,3 +1,19 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin settingBtn {
+  border-radius: 6px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  height: 42px;
+}
+h6,
+p {
+  margin: 0;
+}
 :root {
   --color-brown: #52503b;
   --color-white: #f9fcff;
@@ -19,10 +35,16 @@ body {
 }
 .header {
   background: var(--color-brown);
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+  @include flex;
   padding: 5px 120px 10px 120px;
+  &_btn {
+    background: var(--color-white);
+    color: var(--color-brown);
+    width: 117px;
+    font-size: 17px;
+    @include settingBtn;
+  }
   img {
     width: 128px;
     height: 45px;
@@ -39,10 +61,10 @@ body {
 .main {
   height: 800px;
   background: url("./images/back-house.png") no-repeat center;
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%; /* Opera 9.6+ */
-  background-size: 100%; /* Современные браузеры */
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,14 +94,113 @@ body {
   }
 }
 .block-decription {
-    display: flex;
-    justify-content: center;
+  width: auto;
+  @include flex;
+  justify-content: center;
   background-color: var(--color-yellow-light);
-  width: 1440px;
   height: 410px;
+  &_btn {
+    background: var(--color-brown);
+    width: 107px;
+    color: var(--color-white);
+    @include settingBtn;
+  }
+  &_text-block-first {
+    padding-right: 40px;
+    width: 360px;
+    height: auto;
+  }
+  &_text-block-second {
+    width: 343px;
+    height: auto;
+    p {
+      margin-top: -12px;
+      margin-bottom: 19px;
+    }
+  }
+  .decoration-line {
+    position: relative;
+    left: 94.5%;
+    bottom: top;
+    top: 171%;
+  }
 }
-.block-decription-caps {
+.block-caps {
   background-color: var(--color-white);
-  width: 1440px;
   height: 568px;
+  &__text {
+    width: 1287px;
+    height: 288px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    text-align: center;
+    color: var(--color-brown);
+  }
+  .decoration-line {
+    position: relative;
+    left: 33.5%;
+    top: -33%;
+  }
+}
+.background-kitchen {
+  background: url("./images/kitchen.png") no-repeat center;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  height: 600px;
+  width: auto;
+}
+.block-arrangements {
+  background: var(--color-yellow-light);
+  border-radius: 0px;
+  width: auto;
+  height: 530px;
+  h6 {
+    font-size: 17px;
+    color: var(--color-brown);
+    margin-top: 5px;
+  }
+  p {
+    color: var(--color-brown);
+    margin: 5px;
+  }
+  &_sleeping-block {
+    text-align: center;
+
+    div {
+      h3 {
+        color: var(--color-brown);
+        font-size: 30px;
+      }
+      p {
+        color: var(--color-brown);
+
+        max-width: 32%;
+        position: relative;
+        left: 34%;
+      }
+      padding-top: 40px;
+    }
+  }
+  &_chair-block {
+    text-align: center;
+    width: 240px;
+  }
+  &_door-block {
+    text-align: center;
+    width: 240px;
+  }
+  &_bedrooms-block {
+    text-align: center;
+    width: 240px;
+  }
+}
+.flex-setting {
+  justify-content: space-around;
+  display: flex;
+  padding-top: 50px;
 }

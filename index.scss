@@ -34,6 +34,7 @@ body {
   margin: 0;
 }
 .header {
+  flex-wrap: wrap;
   background: var(--color-brown);
   justify-content: space-between;
   @include flex;
@@ -57,14 +58,22 @@ body {
       color: var(--color-white);
     }
   }
+  @media (max-width: 756px) {
+    img {
+      padding: 10px 0 10px 0;
+    }
+    &_contact-block {
+      padding-bottom: 10px;
+    }
+  }
 }
 .main {
   height: 800px;
   background: url("./images/back-house.png") no-repeat center;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,11 +103,11 @@ body {
   }
 }
 .block-decription {
+  padding: 50px 0;
   width: auto;
   @include flex;
   justify-content: center;
   background-color: var(--color-yellow-light);
-  height: 410px;
   &_btn {
     background: var(--color-brown);
     width: 107px;
@@ -121,7 +130,7 @@ body {
   .decoration-line {
     position: relative;
     left: 95.5%;
-    bottom: 41px;
+    bottom: 27px;
   }
 }
 .block-caps {
@@ -146,6 +155,14 @@ body {
       height: auto;
       margin-bottom: 35px;
     }
+    @media (max-width: 772px) {
+      font-size: 70px;
+      padding: 20px;
+      word-break: break-all;
+    }
+    @media (max-width: 500px) {
+      font-size: 50px;
+    }
   }
   .decoration-line {
     position: relative;
@@ -155,19 +172,13 @@ body {
 }
 .background-nightstand {
   background: url("./images/nightstand.png") no-repeat center;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+  background-size: cover;
   height: 600px;
   width: auto;
 }
 .background-kitchen {
   background: url("./images/kitchen.png") no-repeat center;
-  -moz-background-size: 100%;
-  -webkit-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+  background-size: cover;
   height: 600px;
   width: auto;
 }
@@ -175,7 +186,7 @@ body {
   background: var(--color-yellow-light);
   border-radius: 0px;
   width: auto;
-  height: 530px;
+  padding-bottom: 20px;
   h6 {
     font-size: 17px;
     color: var(--color-brown);
@@ -205,6 +216,9 @@ body {
   &_chair-block {
     text-align: center;
     width: 240px;
+    @media (max-width: 1000px) {
+      padding: 10px;
+    }
   }
   &_door-block {
     text-align: center;
@@ -218,10 +232,10 @@ body {
 .flex-setting {
   justify-content: space-around;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 50px;
 }
 .block-6 {
-  height: 726px;
   background: var(--color-white);
   &_header {
     padding-top: 3%;
@@ -241,21 +255,18 @@ body {
     }
   }
   &_body {
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 500px;
+    padding: 0 10% 2% 10%;
     img {
       width: 27px;
       height: auto;
     }
     &__flex {
-        height: 500px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       div {
         @include flex;
-        width: 490px;
+        max-width: 490px;
         padding: 10px 0 10px 0;
         text-align: left;
         h6 {
@@ -265,7 +276,6 @@ body {
           font-size: 17px;
         }
         p {
-          max-width: 380px;
           word-break: break-word;
           max-width: 468px;
           padding-left: 10px;
@@ -278,23 +288,24 @@ body {
 .block-7 {
   display: flex;
   flex-direction: column;
-  height: 682px;
   background: var(--color-yellow-light);
   border: 1px solid rgba(82, 80, 59, 0.1);
   &_body {
     border-radius: 4px;
     box-sizing: border-box;
     background: var(--color-white);
-    width: 584px;
-    height: 266px;
+    max-width: 584px;
+    max-height: 266px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
+    margin: 10px 10px 50px 10px;
   }
   &__flex {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 5%;
   }
   &_header {
@@ -315,7 +326,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   &_header {
+    margin-top: 20px;
     width: 548px;
     height: 114px;
     display: flex;
@@ -383,15 +396,12 @@ body {
   }
 }
 .block-10 {
-  height: 608px;
   background: var(--color-brown);
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
   &_pages {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
     a {
       text-decoration: none;
       color: var(--color-white);
@@ -403,7 +413,7 @@ body {
     }
   }
   &_social {
-    padding: 5px;
+    padding: 10px;
     p {
       font-size: 17px;
       padding: 5px;
@@ -416,7 +426,8 @@ body {
     }
   }
   &_email {
-    width: 306px;
+    padding: 10px;
+    max-width: 335px;
     position: relative;
     input {
       width: 320px;
@@ -425,28 +436,34 @@ body {
       &::placeholder {
         padding-left: 10px;
       }
+      @media (max-width: 280px) {
+        width: 260px;
+      }
     }
     p {
       padding: 20px 0;
     }
     button {
       position: absolute;
-      bottom: 67.5%;
+      bottom: 22.5%;
       z-index: 999999;
-      left: 84%;
+      left: 74%;
       color: var(--color-white);
       background: var(--color-brown);
+      @media (max-width: 655px) {
+        bottom: 7.5%;
+      }
     }
   }
   &_contact {
-    position: absolute;
-    bottom: 58px;
-    left: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     p {
       padding: 20px 0;
+    }
+    img {
+      margin-top: 20px;
     }
   }
   p {
@@ -459,4 +476,14 @@ body {
 }
 .mt-50 {
   margin-top: 50px;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
